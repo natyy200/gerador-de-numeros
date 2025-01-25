@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
 
 :root {
-    --primary-color: #274261;
-    --neutral-color: #18181b;
-    --neutral-color2: #262626;
+    --primary-color-1: #274261;
+    --primary-color-2: #436994;
+    --neutral-color-1: #18181b;
+    --neutral-color-2: #262626;
     --text-color: #d2d8df;
 }
 
@@ -12,4 +13,91 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--neutral-color-1);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--neutral-color-2);
+    padding: 30px 40px;
+    min-width: 470px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    padding: 20px 0px;
+    gap: 50px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.input-field input {
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    border-bottom: 3px solid var(--primary-color-1);
+    font-size: 18px;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.input-field input:focus {
+    outline: none;
+    border-bottom: 4px solid var(--primary-color-1);
+}
+
+#generate {
+    color: var(--text-color);
+    background-color: var(--primary-color-1);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    width: 100%;
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+#generate:hover {
+    background-color: var(--primary-color-2);
+}
+
+#result {
+    font-size: 50px;
+    font-weight: 600;
 }
